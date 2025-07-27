@@ -13,19 +13,6 @@
 
 ## 🚀 快速开始
 
-### 使用方法
-
-1. **直接订阅**（推荐）
-
-   ```
-   https://raw.githubusercontent.com/ClashConnectRules/Clash/main/rules3.ini
-   ```
-
-2. **下载配置文件**
-
-   - 下载 `rules3.ini` 文件
-   - 导入到你的 Clash 客户端
-
 ### 支持的客户端
 
 - ✅ Clash for Windows
