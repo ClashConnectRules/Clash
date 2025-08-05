@@ -1,125 +1,125 @@
-# Clash 规则配置
+# Clash Rule Configuration
 
-一个优化的 Clash 代理规则配置，提供精确的流量分流和高效的网络访问体验。
+An optimized Clash proxy rule configuration, providing precise traffic splitting and an efficient web access experience.
 
-## 📋 特性
+## 📋 Features
 
-- **🌐 智能分流**：国际流量和国内流量自动识别分流
-- **🚫 广告拦截**：内置国内外广告过滤规则
-- **🤖 AI 服务优化**：专门针对 OpenAI、Claude、Gemini 等 AI 服务的路由规则
-- **📱 应用专用规则**：为 YouTube、微软、谷歌、Apple 等服务提供专用分组
-- **🇨🇳 国内优化**：完整的国内网站和 IP 白名单
-- **🛡️ 隐私保护**：WeChat 可选择不同地区节点保护隐私
+  - **🌐 Intelligent Splitting**: Automatically identifies and splits international and domestic traffic.
+  - **🚫 Ad Blocking**: Built-in filtering rules for both domestic and international ads.
+  - **🤖 AI Services Optimization**: Specialized routing rules for AI services like OpenAI, Claude, and Gemini.
+  - **📱 App-Specific Rules**: Dedicated groups for services like YouTube, Microsoft, Google, and Apple.
+  - **🇨🇳 Mainland China Optimization**: A comprehensive whitelist for domestic Chinese websites and IPs.
+  - **🛡️ Privacy Protection**: Choose different regional nodes for WeChat to protect privacy.
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 支持的客户端
+### Supported Clients
 
-- ✅ Clash for Windows
-- ✅ ClashX (macOS)
-- ✅ Clash for Android
-- ✅ ClashX Pro
-- ✅ 其他支持 Clash 配置的客户端
+  - ✅ Clash for Windows
+  - ✅ ClashX (macOS)
+  - ✅ Clash for Android
+  - ✅ ClashX Pro
+  - ✅ Other clients that support the Clash configuration format.
 
-## 📊 代理组说明
+## 📊 Proxy Group Description
 
-### 通用组
+### General Groups
 
-- **🌐 国际流量**：所有国外网站和服务的默认选择
-- **🎯 国内流量**：国内网站和服务，默认直连
+  - **🌐 International Traffic**: The default choice for all foreign websites and services.
+  - **🎯 Domestic Traffic**: For domestic Chinese websites and services, set to DIRECT by default.
 
-### 去广告组
+### Ad-Blocking Groups
 
-- **🚫 国内广告**：拦截国内广告，支持 REJECT/DIRECT 选择
-- **🚫 国外广告**：拦截国外广告，支持 REJECT/DIRECT 选择
+  - **🚫 Domestic Ads**: Blocks domestic ads, supports REJECT/DIRECT options.
+  - **🚫 International Ads**: Blocks international ads, supports REJECT/DIRECT options.
 
-### 专用服务组
+### Dedicated Service Groups
 
-- **🤖 AI 服务**：OpenAI、Claude、Gemini、Anthropic、Copilot
-- **📹 YouTube**：YouTube 专用，优化视频播放体验
-- **Ⓜ️ 微软服务**：Microsoft、OneDrive 等微软服务
-- **🔍 谷歌服务**：Google 搜索、Gmail、Google FCM（不包含 YouTube）
-- **🍎 Apple 服务**：App Store、iCloud、Apple Music 等
-- **🌍 国外媒体**：Netflix、TikTok、Instagram、Threads 等
-- **🫧 WeChat**：微信专用，可选择不同地区节点
+  - **🤖 AI Services**: OpenAI, Claude, Gemini, Anthropic, Copilot.
+  - **📹 YouTube**: Dedicated to YouTube for an optimized video playback experience.
+  - **Ⓜ️ Microsoft Services**: Microsoft, OneDrive, and other Microsoft services.
+  - **🔍 Google Services**: Google Search, Gmail, Google FCM (does not include YouTube).
+  - **🍎 Apple Services**: App Store, iCloud, Apple Music, etc.
+  - **🌍 International Media**: Netflix, TikTok, Instagram, Threads, etc.
+  - **🫧 WeChat**: Dedicated for WeChat, allowing selection of different regional nodes.
 
-## 🎯 规则优先级
+## 🎯 Rule Priority
 
-规则按以下优先级匹配（从高到低）：
+Rules are matched in the following order of priority (from highest to lowest):
 
-1. **去广告规则** - 最高优先级，拦截广告
-2. **国内站点规则** - 识别国内网站和服务
-3. **AI 服务** - 各种 AI 平台和服务
-4. **YouTube** - YouTube 视频服务
-5. **微软服务** - Microsoft 相关服务
-6. **谷歌服务** - Google 相关服务（除 YouTube）
-7. **Apple 服务** - Apple 生态服务
-8. **国外媒体** - 国外流媒体和社交媒体
-9. **其他规则** - WeChat、电报等
-10. **地理位置规则** - 基于 IP 的地理位置判断
-11. **最终匹配** - 未匹配规则的流量
+1.  **Ad-Blocking Rules** - Highest priority to block ads.
+2.  **Domestic Site Rules** - Identifies domestic Chinese websites and services.
+3.  **AI Services** - Various AI platforms and services.
+4.  **YouTube** - YouTube video services.
+5.  **Microsoft Services** - Microsoft-related services.
+6.  **Google Services** - Google-related services (excluding YouTube).
+7.  **Apple Services** - Apple ecosystem services.
+8.  **International Media** - Foreign streaming and social media.
+9.  **Other Rules** - WeChat, Telegram, etc.
+10. **Geolocation Rules** - IP-based geographical location determination.
+11. **Final Match** - Traffic that does not match any other rule.
 
-## 🔧 自定义配置
+## 🔧 Custom Configuration
 
-### 修改代理组
+### Modifying Proxy Groups
 
-所有代理组都包含以下选项：
+All proxy groups include the following options:
 
-- 🚀 节点选择
-- ♻️ 自动选择
-- 各地区节点（香港、台湾、新加坡、日本、美国、英国等）
-- 🚀 手动切换
-- DIRECT（直连）
+  - 🚀 Proxy Selection
+  - ♻️ Auto Select
+  - Regional Nodes (Hong Kong, Taiwan, Singapore, Japan, USA, UK, etc.)
+  - 🚀 Manual Select
+  - DIRECT
 
-### WeChat 地区选择
+### WeChat Region Selection
 
-WeChat 支持选择不同地区：
+WeChat supports selecting different regions:
 
-- **DIRECT** - 国内直连
-- **🇭🇰 香港** - 访问港版功能
-- **🇨🇳 台湾** - 访问台湾版功能
-- **其他地区** - 根据需要选择
+  - **DIRECT** - Direct connection within Mainland China.
+  - **🇭🇰 Hong Kong** - Access Hong Kong-specific features.
+  - **🇨🇳 Taiwan** - Access Taiwan-specific features.
+  - **Other Regions** - Select as needed.
 
-## 📝 规则来源
+## 📝 Rule Sources
 
-本配置使用以下优质规则源：
+This configuration uses the following high-quality rule sources:
 
-- **ACL4SSR**：基础分流规则
-- **blackmatrix7/ios_rule_script**：应用专用规则
-- **DivineEngine/Profiles**：国内白名单规则
+  - **ACL4SSR**: Base rules for traffic splitting.
+  - **blackmatrix7/ios\_rule\_script**: App-specific rules.
+  - **DivineEngine/Profiles**: Rules for the Mainland China whitelist.
 
-所有规则源均为开源项目，定期更新维护。
+All rule sources are open-source projects and are regularly updated and maintained.
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交 Issue 和 Pull Request 来改进这个配置！
+Issues and Pull Requests are welcome to improve this configuration\!
 
-### 如何贡献
+### How to Contribute
 
-1. Fork 这个仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
+1.  Fork this repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
 
-## 📄 许可证
+## 📄 License
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
 
-## ⚠️ 免责声明
+## ⚠️ Disclaimer
 
-- 本配置仅供学习和研究使用
-- 请遵守当地法律法规
-- 使用本配置所产生的任何问题，作者不承担责任
+  - This configuration is for learning and research purposes only.
+  - Please comply with local laws and regulations.
+  - The author assumes no responsibility for any issues that may arise from the use of this configuration.
 
-## 🙏 致谢
+## 🙏 Acknowledgements
 
-感谢以下项目和贡献者：
+Thanks to the following projects and contributors:
 
-- [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
-- [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
+  - [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
+  - [blackmatrix7/ios\_rule\_script](https://github.com/blackmatrix7/ios_rule_script)
+  - [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
 
----
+-----
 
-如果这个配置对你有帮助，请给个 ⭐ Star 支持一下！
+If this configuration is helpful to you, please give it a ⭐ Star to show your support!
